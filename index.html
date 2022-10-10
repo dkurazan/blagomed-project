@@ -6,11 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/header.css">
     <title>Blagomed</title>
 </head>
 <body>
-    <h1>hrkk</h1>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__row">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="#">
+                    </a>
+                </div>
+                <form class="header__search">
+                    <div class="header__search-inner">
+                        <input type="text" placeholder="Знайти фахівця">
+                        <button></button>
+                    </div>
+                </form>
+                <div class="header__nav">
+                    <div class="header__language-button">Українська</div>
+                    <div class="header__log-in-button">Увійти</div>
+                    <div class="header__menu">Меню</div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="header-mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1">
+                    <div class="header-mobile__logo">
+                        <a href="index.html">
+                            <img src="img/logo-mobile.png" alt="#">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="header-mobile__nav">
+                        <div class="header-mobile__messages">
+                            <a href="#"><div class="header-mobile__icon-messages"></div></a>
+                            <div class="header-mobile__count-messages" >12</div>
+                        </div>
+                        <div class="header-mobile__notifications">
+                            <a href="#">
+                                <div class="header-mobile__icon-notifications"></div>
+                            </a>
+                            <div class="header-mobile__count-notifications">126</div>
+                        </div>
+                        <div class="header-mobile__profile-icon">
+                            <a href="#">
+                                <img src="img/Iryna-photo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="header-mobile__menu"></div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="header-mobile__search">
+                        <div class="header-mobile__search-inner">
+                            <input type="text" placeholder="Шукати фахівця, клініку, послугу...">
+                            <button></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <script src="script.js"></script>
 </body>

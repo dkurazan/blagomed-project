@@ -1,0 +1,333 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Avenir Next Cyr', sans-serif !important;
+}
+
+body{
+    background-color: #f6f4fc;
+}
+
+.header__container{
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.header__row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 0 45px 0;
+}
+
+.header__logo{
+    flex: 0 0 20.9375%;
+    max-width: 20.9375%;
+    display: flex;
+    align-items: center;
+}
+
+.header__search{
+    flex: 0 0 43.125%;
+    max-width: 43.125%;
+    display: flex;
+    align-items: center;
+}
+
+.header__nav{
+    flex: 0 0 35.9375%;
+    max-width: 35.9375%;
+}
+
+.header__logo>a{
+    display: block;
+}
+
+.header__logo>a>img{
+    max-width: 100%;
+}
+
+/* search */
+
+.header__search-inner{
+    flex: 0 0 82.6087%;
+    max-width: 82.6087%;
+    display: flex;
+    border: 1px solid #8486a8;
+    border-radius: 4px;
+    height: 50px;
+}
+
+.header__search-inner input{
+    flex: 0 0 84.2105%;
+    max-width: 84.2105%;
+    border: none;
+    background-color: transparent;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.header__search-inner input::placeholder{
+    font-size: 16px;
+    color: rgba(22, 57, 91, 0.8);
+    line-height: 1.2;
+}
+
+.header__search-inner input:focus{
+    outline: none;
+}
+
+.header__search-inner button{
+    flex: 0 0 15.7895%;
+    max-width: 15.7895%;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header__search-inner button:hover{
+    cursor: pointer;
+}
+
+/* nav */
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header__nav div{
+    font-size: 18px;
+    color: rgb(22, 57, 91);
+    line-height: 1.2;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: .3s all ease-in-out;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__language-button{
+    padding: 0 31px 0 29px;
+    background-image: url(../img/arrow-blue-down-icon.png);
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.header__log-in-button{
+    padding: 0 29px 0 67px;
+    background-image: url(../img/lock-iconpng.png);
+    background-repeat: no-repeat;
+    background-position: left 30px center;
+}
+
+.header__log-in-button:hover, .header__language-button:hover{
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    transition: .3s all ease-in-out;
+}
+
+.header__menu{
+    padding: 0 34px 0 16px;
+    background-image: url(../img/menu-icon.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.header__menu:hover{
+    cursor: pointer;
+}
+
+.header-mobile{
+    display: none;
+}
+
+
+@media(max-width:960px) {
+    .header__nav div{
+        font-size: 15px;
+        
+    }
+
+    .header__logo{
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+
+    
+
+}
+
+@media(max-width:782px){
+
+    .header__nav{
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+
+    .header__search{
+        flex: 0 0 70%;
+        max-width: 70%;
+        justify-content: center;
+    }
+
+    .header__nav .header__language-button, .header__nav .header__log-in-button{
+        display: none;
+        
+    }
+}
+
+@media(max-width:479px){
+    .container{
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .header{
+        display: none;
+    }
+
+    .header-mobile{
+        padding-top: 30px;
+        display: block;
+    }
+
+    .header-mobile__logo{
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .header-mobile__logo a, .header-mobile__notifications a{
+        display: block;
+    }
+
+    .header-mobile__nav{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .header-mobile__messages, .header-mobile__notifications{
+        position: relative;
+        margin-right: 20px;
+    }
+
+    .header-mobile__icon-messages{
+        background: url(../img/mail-icon.png) no-repeat center;
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-mobile__count-messages{
+        background-color: #16395b;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 9px;
+        width: 24px;
+        height: 20px;
+        line-height: 20px;
+        position: absolute;
+        top: -13px;
+        right: -10px;
+    }
+
+    .header-mobile__count-notifications{
+        background-color: #16395b;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 9px;
+        width: 32px;
+        height: 20px;
+        line-height: 20px;
+        position: absolute;
+        top: -13px;
+        right: -18px;
+    }
+
+    .header-mobile__icon-notifications{
+        background: url(../img/bell-img.png) no-repeat center;
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-mobile__profile-icon a{
+        display: block;
+        margin: 0 20px 0 10px;
+    }
+
+    .header-mobile__profile-icon img{
+        max-width: 70px;
+    }
+
+    .header-mobile__menu{
+        width: 25px;
+        height: 25px;
+        background: url(../img/menu-icon.png) no-repeat center;
+    }
+
+    .header-mobile__menu:hover{
+        cursor: pointer;
+    }
+
+    /* mobile search */
+    .header-mobile__search{
+        padding-top: 30px;
+    }
+
+    .header-mobile__search-inner{
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+        border: 1px solid #8486a8;
+        border-radius: 4px;
+        height: 40px;
+    }
+    
+    .header-mobile__search-inner input{
+        flex: 0 0 84.2105%;
+        max-width: 84.2105%;
+        border: none;
+        background-color: transparent;
+        padding-left: 15px;
+        font-size: 18px;
+        color: rgba(22, 57, 91, 0.8);
+    }
+    
+    .header-mobile__search-inner input::placeholder{
+        font-size: 16px;
+        color: rgba(22, 57, 91, 0.8);
+        line-height: 1.2;
+    }
+    
+    .header-mobile__search-inner input:focus{
+        outline: none;
+    }
+    
+    .header-mobile__search-inner button{
+        flex: 0 0 15.7895%;
+        max-width: 15.7895%;
+        background-color: transparent;
+        border: none;
+        background-image: url(../img/search-icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .header-mobile__search-inner button:hover{
+        cursor: pointer;
+    }
+    
+}
