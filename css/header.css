@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: 'Avenir Next Cyr', sans-serif !important;
+    font-family: 'Avenir Next Cyr', sans-serif;
 }
 
 body{
@@ -78,6 +78,7 @@ body{
     font-size: 16px;
     color: rgba(22, 57, 91, 0.8);
     line-height: 1.2;
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
 }
 
 .header__search-inner input:focus{
