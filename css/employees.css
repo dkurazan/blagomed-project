@@ -1,0 +1,158 @@
+.employees__title{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+    padding-bottom: 20px;
+}
+
+.employees__title>h3{
+    font-size: 24px;
+    color: rgb(22, 57, 91);
+    font-weight: bold;
+    line-height: 1.2;      
+}
+
+.employees__title>div>a{
+    font-size: 14px;
+    color: rgb(0, 215, 169);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.employees__cards{
+    margin: 0 -30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.card__top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 13px;
+}
+
+.card__info{
+    padding-top: 10px;
+}
+
+.card__reviews, .card__services, .card__rating{
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.card__rating-point h6:first-child, .card__reviews-point h6:first-child, .card__services-point h6:first-child{
+    font-size: 16px;
+    color: rgb(9, 67, 191);
+    line-height: 1.2;
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
+}
+
+.card__rating-point h6:last-child, .card__reviews-point h6:last-child, .card__services-point h6:last-child{
+    font-size: 13px;
+    color: rgb(112, 112, 112);
+    line-height: 1.2;
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
+}
+
+.card__rating-icon, .card__services-icon, .card__reviews-icon{
+    border-radius: 50%;
+    background-color: rgb(228, 237, 254);
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.card__rating-icon{
+    background-image: url(../img/star-blue-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card__reviews-icon{
+    background-image: url(../img/reviews-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card__services-icon{
+    background-image: url(../img/services-blue-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+
+.card__photo{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__name{
+    padding-bottom: 10px;
+}
+
+.card__name a{
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 900;
+    
+    text-decoration: none;
+    color: black;
+}
+
+.card__desc{
+    font-size: 16px;
+    color: rgb(9, 67, 191);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.card__location{
+    padding-top: 25px;  
+}
+
+.card__location a{
+    font-size: 14px;
+    line-height: 1.2;
+    padding-left: 25px;
+    background: url(../img/location-blue-icon.png) no-repeat bottom left; 
+    padding-top: 5px;
+    font-weight: 700;  
+    text-decoration: none;
+    color: black;
+}
+
+.card__photo-desc{
+    font-size: 14px;
+    color: rgb(22, 57, 91);
+    line-height: 1.2;
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
+    text-align: center;
+    padding-top: 14px;
+}
+
+.card__photo-inner{
+    position: relative;
+    
+}
+
+.card__status{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #00d7a9;
+    border: 3px solid white;
+    border-radius: 50%;
+    bottom: 7px;
+    left: 7px;
+}
+
+.card__status.dont-available{
+    background-color: #d2e1f5;
+}
