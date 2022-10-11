@@ -1,3 +1,7 @@
+.employees{
+    padding-bottom: 80px;
+}
+
 .employees__title{
     display: flex;
     justify-content: space-between;
@@ -155,4 +159,78 @@
 
 .card__status.dont-available{
     background-color: #d2e1f5;
+}
+
+
+/* arrows */
+.employees__arrows{
+    display: flex;
+    justify-content: center;
+}
+
+.employees__left-arrow, .employees__right-arrow{
+    width: 50px;
+    height: 50px;
+    background-color: #e4edfe;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/black-arrow-icon.png);
+}
+
+.employees__right-arrow{
+    transform: rotate(180deg);
+}
+
+.employees__right-arrow:hover{
+    transform: rotate(0deg);
+}
+
+.employees__left-arrow:hover, .employees__right-arrow:hover{
+    background-color: #00d7a9;
+    background-image: url(../img/white-arrow-icon.png);
+    cursor: pointer;
+}
+
+.employees__left-arrow:hover{
+    transform: rotate(180deg);
+}
+
+.col-md-1-flex{
+    display: flex;
+    justify-content: end;
+}
+
+.employees__dots{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.employees__dots ul{
+    position: static;
+}
+
+.employees__dots>ul>li{
+    width: 8px;
+    height: 8px;
+    background-color: #00d7a9;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+    transition: .3s all ease-in-out;
+}
+
+.employees__dots>ul>li>button{
+    display: none;
+}
+
+.employees__dots>ul>li:last-child{
+    margin-right: 0;
+}
+
+.slick-dots>.slick-active{
+    width: 20px !important;
+    border-radius: 10px;
+    transition: .3s all ease-in-out;
 }
