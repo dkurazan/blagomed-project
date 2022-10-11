@@ -104,6 +104,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: end;
+    font-family: 'Avenir Next Cyr', sans-serif;
 }
 
 .header__nav div{
