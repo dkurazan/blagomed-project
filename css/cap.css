@@ -25,7 +25,6 @@
 
 .cap__bc-img div{
     position: absolute;
-    z-index: 10;
 }
 
 .cap__profile-icon{
@@ -33,7 +32,7 @@
     left: 7%;
 }
 
-.cap__like-button{
+.like-button{
     width: 40px;
     height: 40px;
     background-image: url(../img/heart-icon.png);
@@ -43,10 +42,10 @@
     border-radius: 50%;
     box-shadow: 0px 5px 10px 0px rgba(1, 1, 1, 0.1);
     bottom: 9px;
-    left: 13px;
+
 }
 
-.cap__like-button:hover{
+.like-button:hover{
     cursor: pointer;
 }
 
@@ -157,15 +156,24 @@
     font-weight: 600;
 }
 
-.cap__rating{
+.cap__rating-inner{
     
     padding-right: 21px;
     background: url(../img/star-green-icon.png) no-repeat center right;
 }
 
+.cap__rating{
+    display: flex;
+}
+
 .cap__reviews{
     padding-left: 10px;
     padding-right: 30px;
+}
+
+.cap__reviews-hidden{
+    display: none;
+    padding-left: 5px;
 }
 
 .cap__doctors{
@@ -177,6 +185,13 @@
 .cap__services{
     padding-left: 26px;
     background: url(../img/services-green-icon.png) no-repeat center left;
+}
+
+.cap__fillials{
+    display: none;
+    padding-left: 26px;
+    background: url(../img/fillial-icon.png) no-repeat center left;
+    padding-right: 30px;
 }
 
 
@@ -214,13 +229,59 @@
     padding: 0 27px;
 }
 
+.button-fill{
+    background-color: #00ffc8!important;
+}
+
 .cap__location-button{
     width: 40px;
     background: url(../img/location-black-icon.png) no-repeat center;
     margin-right: 0 !important;
 }
 
+.like-button.liked{
+    background-color: #00ffc8;
+    background-image: url(../img/heart-icon-white.png);
+}
 
+.cap__info{
+    background-color: transparent;
+    bottom: -292px;
+    transition: .3s all ease-in-out;
+}
+
+.cap__info-inner{
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all ease-in-out;
+}
+
+.cap-inner-active{
+    opacity: 1;
+    visibility: visible;
+    transition: .3s all ease-in-out;
+}
+
+.cap-active{
+    background-color: #fff !important;
+    bottom: 0 !important;
+    transition: .3s all ease-in-out;
+}
+
+.cap__open-info{
+    transform: rotate(180deg);
+    transition: .3s all ease-in-out;
+}
+
+.cap__info-inner.cap-inner-active + .cap__open-info{
+    transform: rotate(0deg);
+    transition: .3s all ease-in-out;
+}
+
+.cap__interaction-buttons-inner{
+    position: relative;
+    z-index: 25;
+}
 
 
 @media(max-width:1410px){
@@ -240,7 +301,7 @@
         font-size: 14px;
     }
 
-    .col-md-wrap{
+    .col-lg-wrap{
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -256,7 +317,7 @@
     .cap__interaction-info{
         padding-right: 0;
         justify-content: center;
-        padding-bottom: 20px;
+        padding-bottom: 25px;
     }
 
     .cap__interaction-buttons{
@@ -289,7 +350,7 @@
         height: 110px;
     }
 
-    .cap__like-button{
+    .like-button{
         width: 35px;
         height: 35px;
         bottom: 0;
@@ -318,5 +379,95 @@
     .container{
         max-width: 100%;
         padding: 0 15px;
+    }
+    .cap__profile-icon{
+        top: -40px;
+    }
+    .cap__profile-icon img{
+        width: 80px;
+        height: 80px;
+    }
+    .cap__profile-icon>.like-button{
+        display: none;
+    }
+
+    .cap__title{
+        left: 4%;
+    }
+
+    .cap__interaction-info{
+        justify-content: start;
+    }
+
+    .cap__interaction-info-inner{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .cap__interaction-info-inner>div{
+        flex: 0 0 25%;
+        max-width: 25%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cap__reviews{
+        display: none;
+    }
+
+    .cap__fillials, .cap__reviews-hidden{
+        display: block;
+    }
+
+    .cap__location-button{
+        background-image: url(../img/map-icon.png);
+    }
+
+    .cap__interaction-buttons{
+        justify-content: start;
+    }
+
+    .cap__interaction-buttons-inner{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+}
+
+@media(max-width:681px){
+    .cap__interaction-info-inner>div{
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+@media(max-width:550px){
+    .cap__interaction-info-inner>div{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media(max-width:479px){
+    .cap__interaction-buttons-inner{
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .cap__interaction-buttons-inner>div{
+        margin-bottom: 10px;
+    }
+
+    .cap__interaction-info-inner> div{
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .cap__location-button{
+        display: flex;
+        justify-self: start;
+    }
+    .cap{
+        padding-bottom: 50px;
     }
 }

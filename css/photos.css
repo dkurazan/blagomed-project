@@ -1,0 +1,62 @@
+.photos, iFrame{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    max-width: 1496px;
+    top: 0;
+    left: 0;
+}
+
+iFrame{
+    padding-bottom: 100px;
+}
+
+.invisible{
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+.photos{
+    width: 100%;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+    position:static;
+    width: 100%;
+}
+
+.slick-slide img {
+    max-width: 100%;
+    
+    border-radius: 20px;
+}
+
+.photos .slick-slide:last-child{
+    position: relative;
+}
+
+.photos .slick-slide{
+    padding-left: 20px;
+}
+
+.photos .slick-slide:last-child img{
+    filter: brightness(0.4);
+}
+
+.photos .slick-slide:last-child>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 14px;
+    font-family: "Avenir Next Cyr";
+    color: rgb(254, 254, 254);
+    line-height: 1.714;
+    
+}
+
+.slick-slide img {
+    max-width: 100%;
+}

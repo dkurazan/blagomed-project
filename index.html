@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid.css">
-    <link href="http://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/cap.css">
     <link rel="stylesheet" href="css/employees.css">
-
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/photos.css">
+    <link href="http://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <title>Blagomed</title>
@@ -32,14 +33,50 @@
                     </div>
                 </form>
                 <div class="header__nav">
-                    <div class="header__language-button">Українська</div>
-                    <div class="header__log-in-button">Увійти</div>
+                    <div class="header__language-button">
+                        <h4>Українська</h4>
+                        <ul class="hed__langs">
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__log-in-button log-in">Увійти</div>
                     <div class="header__menu">Меню</div>
-
                 </div>
             </div>
         </div>
     </header>
+    <div class="pannel__menu">
+        <ul>
+            <li><a href="#">Українська</a></li>
+            <li><a href="#" class="log-in">Увійти</a></li>
+            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Lorem</a></li>  
+        </ul>
+    </div>
+    <div class="modal">
+        <div class="modal__block">
+            <div class="modal__block-inner">
+                <div>
+                    <img src="img/blagomed-icon.png" alt="">
+                    <div class="cls-mdl">X</div>
+                </div>
+                <h1>Введіть дані для входу</h1>
+                <form action="">
+                    <h4>Ваш логін</h4>
+                    <input type="text" placeholder="login">
+                    <h4>Ваш пароль</h4>
+                    <input type="password" placeholder="password" >
+                    <button>Увійти</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
     <header class="header-mobile">
         <div class="container">
             <div class="row">
@@ -85,67 +122,73 @@
     <main class="main">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-lg-12">
                     <section class="cap">
                         <div class="cap__bc-img">
                             <img src="img/bc-img.png" alt="">
                             <div class="cap__profile-icon">
                                 <img src="img/blagomed-icon.png" alt="#">
-                                <div class="cap__like-button"></div>
+                                <div class="like-button"></div>
                             </div>
                             <div class="cap__title">
                                 <h4>Медичний, оздоровчий центр «Благомед»</h4>
                                 <h5>Медичний центр</h5>
                             </div>
                             <div class="cap__info">
-                                <div class="cap__address">
-                                    <h6>Адреса:</h6>
-                                    <h6>пр. Відродження, 13, Луцьк,<br>  Волинська область, Україна, 43000</h6>
-                                </div>
-                                <div class="cap__contacts">
-                                    <h6>Контакти:</h6>
-                                    <h6>+38 (099) 999-99-99</h6>
-                                    <h6>+38 (0332) 77-08-09</h6>
-                                </div>
-                                <div class="cap__work-graph">
-                                    <h6><span>Графік роботи:</span> Зараз працює</h6>
-                                    <div>
-                                        <h6>
-                                            понеділок <br>
-                                            вівторок <br>
-                                            <span>середа</span> <br>
-                                            четвер <br>
-                                            п’ятниця <br>
-                                            субота <br>
-                                        </h6>
-                                        <h6>
-                                            09:00-20:00 <br>
-                                            09:00-20:00 <br>
-                                            <span>09:00-20:00</span><br>
-                                            09:00-20:00 <br>
-                                            09:00-20:00 <br>
-                                            09:00-20:00 <br>
-                                        </h6>
+                                <div class="cap__info-inner">
+                                    <div class="cap__address">
+                                        <h6>Адреса:</h6>
+                                        <h6>пр. Відродження, 13, Луцьк,<br>  Волинська область, Україна, 43000</h6>
+                                    </div>
+                                    <div class="cap__contacts">
+                                        <h6>Контакти:</h6>
+                                        <h6>+38 (099) 999-99-99</h6>
+                                        <h6>+38 (0332) 77-08-09</h6>
+                                    </div>
+                                    <div class="cap__work-graph">
+                                        <h6><span>Графік роботи:</span> Зараз працює</h6>
+                                        <div>
+                                            <h6>
+                                                понеділок <br>
+                                                вівторок <br>
+                                                <span>середа</span> <br>
+                                                четвер <br>
+                                                п’ятниця <br>
+                                                субота <br>
+                                            </h6>
+                                            <h6>
+                                                09:00-20:00 <br>
+                                                09:00-20:00 <br>
+                                                <span>09:00-20:00</span><br>
+                                                09:00-20:00 <br>
+                                                09:00-20:00 <br>
+                                                09:00-20:00 <br>
+                                            </h6>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="cap__open-info"></div>
                             </div>
                         </div>
                         <div class="cap__interaction">
-                            <div class="col-md-7 col-md-wrap">
+                            <div class="col-lg-7 col-lg-wrap">
                                 <div class="cap__interaction-info">
                                     <div class="cap__interaction-info-inner">
-                                        <div class="cap__rating">5.0</div>
-                                        <div class="cap__reviews">953 Відгуків</div>
+                                        <div class="cap__rating">
+                                            <div class="cap__rating-inner">5.0</div>
+                                            <div class="cap__reviews">953 Відгуків</div>
+                                            <div class="cap__reviews-hidden">(953 Відгуків)</div>
+                                        </div>
                                         <div class="cap__doctors">120 лікарів</div>
                                         <div class="cap__services">340 послуг</div>
+                                        <div class="cap__fillials">50 філіалів</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-5 col-md-wrap">
+                            <div class="col-lg-5 col-lg-wrap">
                                 <div class="cap__interaction-buttons">
                                     <div class="cap__interaction-buttons-inner">
-                                        <div class="cap__work-button">Я тут працюю</div>
+                                        <div class="cap__work-button">Я тут не працюю</div>
                                         <div class="cap__about-button">Про клініку</div>
                                         <div class="cap__photos-button">Фото</div>
                                         <div class="cap__location-button"></div>
@@ -154,19 +197,30 @@
                             </div>
                         </div>
                     </section>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5539450863853!2d25.33084901574222!3d50.74676147951738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599f01d8eafbd%3A0xc2a87c26628be881!2z0JHQu9Cw0LPQvtC80LXQtA!5e0!3m2!1suk!2sua!4v1665657804517!5m2!1suk!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <section class="photos">
+                        <div class="photos-slider">
+                            <div><img src="img/blagomed-1.webp" alt=""></div>
+                            <div><img src="img/blagomed-2.webp" alt=""></div>
+                            <div><img src="img/blagomed-3.webp" alt=""></div>
+                            <div>
+                               <a href="#"> <img src="img/blagomed-4.webp" alt=""></a>
+                                <div>+50 фото</div>
+                            </div>
+                          </div>
+                    </section>
                     <section class="employees">
-                        <div class="col-md-12">
+                        <div class="col-lg-12">
                             <div class="employees__title">
                                 <h3 class="title">Лікарі</h3>
-                                <button class="slick-prev slick-arrow" aria-label="Previous" type="button" aria-disabled="false" style="display: block;">Previous</button>
                                 <div>
-                                    <a href="#">Всі лікарі</a>
+                                    <a href="#" class="all-doctors">Всі лікарі</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-lg-12 col-lg-employees">
                             <div class="employees__cards">
-                                <div class="col-md-3">
+                                <div class="col-lg-3 col-lg-relative">
                                     <div class="card">
                                         <div class="card__top">
                                             <div class="card__info">
@@ -198,6 +252,7 @@
                                                         <img src="img/Yurii-photo.png" alt="">
                                                     </a>
                                                     <div class="card__status"></div>
+                                                    <div class="like-button"></div>
                                                 </div>
                                                 <div class="card__photo-desc">Доступний</div>
                                             </div>
@@ -211,9 +266,26 @@
                                                 <a href="#">м. Луцьк, пр. Соборності 89, каб. 102</a>
                                             </div>
                                         </div>
+                                        <div class="card__prices">
+                                            <h4>Послуги та ціни</h4>
+                                            <h5>
+                                                <span>Консультація</span> - від 100 грн
+                                            </h5>
+                                            <h5>
+                                                <span>Сеанс терапії</span> - від 300 грн
+                                            </h5>
+                                            <div class="card__prices-buttons">
+                                                <div class="card__write-btn">
+                                                    <a href="#">Написати</a>
+                                                </div>
+                                                <div class="card__details-btn">
+                                                    <a href="#">Детальніше</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <div class="card">
                                         <div class="card__top">
                                             <div class="card__info">
@@ -245,6 +317,7 @@
                                                         <img src="img/Dmytro-photo.png" alt="">
                                                     </a>
                                                     <div class="card__status dont-available"></div>
+                                                    <div class="like-button"></div>
                                                 </div>
                                                 <div class="card__photo-desc">Не доступний</div>
                                             </div>
@@ -258,9 +331,26 @@
                                                 <a href="#">м. Луцьк, пр. Соборності 89, каб. 345</a>
                                             </div>
                                         </div>
+                                        <div class="card__prices">
+                                            <h4>Послуги та ціни</h4>
+                                            <h5>
+                                                <span>Консультація</span> - від 100 грн
+                                            </h5>
+                                            <h5>
+                                                <span>Сеанс терапії</span> - від 300 грн
+                                            </h5>
+                                            <div class="card__prices-buttons">
+                                                <div class="card__write-btn">
+                                                    <a href="#">Написати</a>
+                                                </div>
+                                                <div class="card__details-btn">
+                                                    <a href="#">Детальніше</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <div class="card">
                                         <div class="card__top">
                                             <div class="card__info">
@@ -292,6 +382,7 @@
                                                         <img src="img/Iryna-photo.png" alt="">
                                                     </a>
                                                     <div class="card__status dont-available"></div>
+                                                    <div class="like-button"></div>
                                                 </div>
                                                 <div class="card__photo-desc">Не доступний</div>
                                             </div>
@@ -305,9 +396,26 @@
                                                 <a href="#">м. Луцьк, пр. Соборності 89, каб. 123</a>
                                             </div>
                                         </div>
+                                        <div class="card__prices">
+                                            <h4>Послуги та ціни</h4>
+                                            <h5>
+                                                <span>Консультація</span> - від 100 грн
+                                            </h5>
+                                            <h5>
+                                                <span>Сеанс терапії</span> - від 300 грн
+                                            </h5>
+                                            <div class="card__prices-buttons">
+                                                <div class="card__write-btn">
+                                                    <a href="#">Написати</a>
+                                                </div>
+                                                <div class="card__details-btn">
+                                                    <a href="#">Детальніше</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <div class="card">
                                         <div class="card__top">
                                             <div class="card__info">
@@ -339,22 +447,40 @@
                                                         <img src="img/Anatoliy-photo.png" alt="">
                                                     </a>
                                                     <div class="card__status dont-available"></div>
+                                                    <div class="like-button"></div>
                                                 </div>
                                                 <div class="card__photo-desc">Не доступний</div>
                                             </div>
                                         </div>
                                         <div class="card__bottom">
                                             <div class="card__name">
-                                                <a href="#">Омельяненко Анатолій  Анатольевич</a>
+                                                <a href="#">Омельяненко Анатолій  Анатолійович</a>
                                             </div>
                                             <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
                                             <div class="card__location">
                                                 <a href="#">м. Луцьк, пр. Соборності 89, каб. 501</a>
                                             </div>
                                         </div>
+                                        <div class="card__prices">
+                                            <h4>Послуги та ціни</h4>
+                                            <h5>
+                                                <span>Консультація</span> - від 100 грн
+                                            </h5>
+                                            <h5>
+                                                <span>Сеанс терапії</span> - від 300 грн
+                                            </h5>
+                                            <div class="card__prices-buttons">
+                                                <div class="card__write-btn">
+                                                    <a href="#">Написати</a>
+                                                </div>
+                                                <div class="card__details-btn">
+                                                    <a href="#">Детальніше</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <div class="card">
                                         <div class="card__top">
                                             <div class="card__info">
@@ -386,6 +512,8 @@
                                                         <img src="img/Yurii-photo.png" alt="">
                                                     </a>
                                                     <div class="card__status"></div>
+                                                    <div class="like-button"></div>
+                                                    
                                                 </div>
                                                 <div class="card__photo-desc">Доступний</div>
                                             </div>
@@ -399,9 +527,26 @@
                                                 <a href="#">м. Луцьк, пр. Соборності 89, каб. 102</a>
                                             </div>
                                         </div>
+                                        <div class="card__prices">
+                                            <h4>Послуги та ціни</h4>
+                                            <h5>
+                                                <span>Консультація</span> - від 100 грн
+                                            </h5>
+                                            <h5>
+                                                <span>Сеанс терапії</span> - від 300 грн
+                                            </h5>
+                                            <div class="card__prices-buttons">
+                                                <div class="card__write-btn">
+                                                    <a href="#">Написати</a>
+                                                </div>
+                                                <div class="card__details-btn">
+                                                    <a href="#">Детальніше</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <div class="card">
                                         <div class="card__top">
                                             <div class="card__info">
@@ -433,6 +578,7 @@
                                                         <img src="img/Dmytro-photo.png" alt="">
                                                     </a>
                                                     <div class="card__status dont-available"></div>
+                                                    <div class="like-button"></div>
                                                 </div>
                                                 <div class="card__photo-desc">Не доступний</div>
                                             </div>
@@ -446,9 +592,26 @@
                                                 <a href="#">м. Луцьк, пр. Соборності 89, каб. 345</a>
                                             </div>
                                         </div>
+                                        <div class="card__prices">
+                                            <h4>Послуги та ціни</h4>
+                                            <h5>
+                                                <span>Консультація</span> - від 100 грн
+                                            </h5>
+                                            <h5>
+                                                <span>Сеанс терапії</span> - від 300 грн
+                                            </h5>
+                                            <div class="card__prices-buttons">
+                                                <div class="card__write-btn">
+                                                    <a href="#">Написати</a>
+                                                </div>
+                                                <div class="card__details-btn">
+                                                    <a href="#">Детальніше</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <div class="card">
                                         <div class="card__top">
                                             <div class="card__info">
@@ -480,6 +643,7 @@
                                                         <img src="img/Iryna-photo.png" alt="">
                                                     </a>
                                                     <div class="card__status dont-available"></div>
+                                                    <div class="like-button"></div>
                                                 </div>
                                                 <div class="card__photo-desc">Не доступний</div>
                                             </div>
@@ -493,9 +657,26 @@
                                                 <a href="#">м. Луцьк, пр. Соборності 89, каб. 123</a>
                                             </div>
                                         </div>
+                                        <div class="card__prices">
+                                            <h4>Послуги та ціни</h4>
+                                            <h5>
+                                                <span>Консультація</span> - від 100 грн
+                                            </h5>
+                                            <h5>
+                                                <span>Сеанс терапії</span> - від 300 грн
+                                            </h5>
+                                            <div class="card__prices-buttons">
+                                                <div class="card__write-btn">
+                                                    <a href="#">Написати</a>
+                                                </div>
+                                                <div class="card__details-btn">
+                                                    <a href="#">Детальніше</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3">
                                     <div class="card">
                                         <div class="card__top">
                                             <div class="card__info">
@@ -527,6 +708,7 @@
                                                         <img src="img/Anatoliy-photo.png" alt="">
                                                     </a>
                                                     <div class="card__status dont-available"></div>
+                                                    <div class="like-button"></div>
                                                 </div>
                                                 <div class="card__photo-desc">Не доступний</div>
                                             </div>
@@ -538,27 +720,47 @@
                                             <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
                                             <div class="card__location">
                                                 <a href="#">м. Луцьк, пр. Соборності 89, каб. 501</a>
+                                            </div>
+                                        </div>
+                                        <div class="card__prices">
+                                            <h4>Послуги та ціни</h4>
+                                            <h5>
+                                                <span>Консультація</span> - від 100 грн
+                                            </h5>
+                                            <h5>
+                                                <span>Сеанс терапії</span> - від 300 грн
+                                            </h5>
+                                            <div class="card__prices-buttons">
+                                                <div class="card__write-btn">
+                                                    <a href="#">Написати</a>
+                                                </div>
+                                                <div class="card__details-btn">
+                                                    <a href="#">Детальніше</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-lg-12">
                             <div class="employees__arrows">
-                                <div class="col-md-1">
+                                <div class="col-lg-1 col-md-2 col-xs-hidden">
                                     <div class="employees__left-arrow"></div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-lg-2 col-sm-4 col-xs-4">
                                     <div class="employees__dots">
                                         
                                     </div>
                                 </div>
-                                <div class="col-md-1 col-md-1-flex">
+                                <div class="col-lg-1 col-lg-1-flex col-md-2 col-xs-hidden">
                                     <div class="employees__right-arrow"></div>
                                 </div>
                             </div>
                         </div>
+                    </section>
+                    <section class="all-doctors-section">
+                        
                     </section>
                 </div>
             </div>
@@ -567,9 +769,9 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-3">
+            <div class="row footer__row">
+                <div class="col-lg-12 col-lg-12-wrap">
+                    <div class="col-lg-3 col-md-6 col-sm-margin">
                         <section class="footer__company">
                             <div class="footer__title">
                                 <a href="#"> Компанія</a>
@@ -577,27 +779,37 @@
                             <div class="footer__about-us">
                                 <a href="#" >Про нас</a>
                             </div>
+                            <div class="footer__news">
+                                <a href="#">Новини</a>
+                            </div>
                             <div class="footer__help">
                                 <a href="#">Довідковий центр</a>
                             </div>
                         </section>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <section class="footer__contacts">
                             <div class="footer__title">
                                 <a href="#">Контакти</a>
                             </div>
                             <div class="footer__mail">
                                 <a href="#">moehealthmapsapi@gmail.com</a>
+                                <a href="#">moniheal@gmail.com</a>
                             </div>
                             <div class="footer__social-networks">
-                                <div class="footer__facebook"></div>
-                                <div class="footer__instagram"></div>
-                                <div class="footer__telegram"></div>
+                                <div class="footer__facebook footer__facebook-active">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="footer__instagram">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="footer__telegram">
+                                    <a href="#"></a>
+                                </div>
                             </div>
                         </section>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-12 col-sm-margin">
                         <section class="footer__subscribe">
                             <div class="footer__title">
                                 Підписатися на нашу розсилку
@@ -608,18 +820,43 @@
                             </form>
                         </section>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6">
                         <section class="footer__language">
                             <form >
                                 <select >
-                                    <option value="Українська"></option>
-                                    <option value="English"></option>
+                                    <option value="ua">Українська</option>
+                                    <option value="en">English</option>
                                 </select>
                             </form>
                         </section>
                     </div>
                 </div>
-                
+                <div class="col-lg-12">
+                    <section class="footer__bottom">
+                        <div class="footer__copyright">
+                            <div class="footer__logo">
+                                <a href="#">
+                                    <img src="img/footer-logo.png" alt="#">
+                                </a>
+                                <a href="#">
+                                    <img src="img/white-mobile-logo.png" alt="#">
+                                </a>
+                            </div>
+                            <h6>2019 <span>MoniHeal.</span> Medical Online Information System</h6>
+                        </div>
+                        <div class="footer__rules">
+                            <div class="footer__data-safety">
+                                <a href="#">Захист даних</a>
+                            </div>
+                            <div class="footer__privacy-policy">
+                                <a href="#">Політика приватності</a>
+                            </div>
+                            <div class="footer__rules-of-use">
+                                <a href="#">Праила користування</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </footer>

@@ -1,67 +1,131 @@
 /* mid */
 
-.col-md-1{
+.col-lg-1{
     flex: 0 0 8.33333%;
     max-width: 8.33333%;
 }
 
-.col-md-2{
+.col-lg-2{
     flex: 0 0 16.66664%;
     max-width: 16.66664%;
 }
 
-.col-md-3{
+.col-lg-3{
     flex: 0 0 25%;
     max-width: 25%;
 }
 
-.col-md-4{
+.col-lg-4{
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
 }
 
-.col-md-5{
+.col-lg-5{
     flex: 0 0 41.66667%;
     max-width: 41.66667%;
 }
 
-.col-md-6{
+.col-lg-6{
     flex: 0 0 50%;
     max-width: 50%;
 }
 
-.col-md-7{
+.col-lg-7{
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
 }
 
-.col-md-8{
+.col-lg-8{
     flex: 0 0 66.66666%;
     max-width: 66.66666%;
 }
 
-.col-md-9{
+.col-lg-9{
     flex: 0 0 75%;
     max-width: 75%;
 }
 
-.col-md-10{
+.col-lg-10{
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
 }
 
-.col-md-11{
+.col-lg-11{
     flex: 0 0 91.66667%;
     max-width: 91.66667%;
 }
 
-.col-md-12{
+.col-lg-12{
     flex: 0 0 100%;
     max-width: 100%;
 }
 
 [class*="col-"]{
     padding: 0 15px;
+}
+
+@media(max-width:1120px){
+    /* mid */
+
+    .col-md-1{
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%;
+    }
+
+    .col-md-2{
+        flex: 0 0 16.66664%;
+        max-width: 16.66664%;
+    }
+
+    .col-md-3{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .col-md-4{
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    .col-md-5{
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+    }
+
+    .col-md-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-md-7{
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+    }
+
+    .col-md-8{
+        flex: 0 0 66.66666%;
+        max-width: 66.66666%;
+    }
+
+    .col-md-9{
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+
+    .col-md-10{
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+
+    .col-md-11{
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%;
+    }
+
+    .col-md-12{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 @media(max-width:782px){
@@ -147,6 +211,10 @@
     .col-xs-4{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .col-xs-hidden{
+        display: none;
     }
 }
 

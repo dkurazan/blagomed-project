@@ -1,0 +1,372 @@
+*{
+    font-family: 'Avenir Next Cyr', sans-serif;
+}
+
+.row{
+    margin: 0 -15px;
+}
+
+.footer__logo a:last-child{
+    display: none;
+}
+
+.col-lg-12-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__title a, .footer__title{
+    font-size: 18px;
+    color: rgb(22, 57, 91);
+    line-height: 1.2;
+    text-decoration: none;
+    font-family: 'Avenir Next Cyr', sans-serif;
+    font-weight: 700;
+}
+
+.footer__title{
+    padding-bottom: 30px;
+}
+
+.footer__language form{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.footer__language select{
+    width: 65.2174%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 19px;
+    font-size: 14px;
+    color: rgb(22, 57, 91);
+    line-height: 1.2;
+    border: 1px solid #545784;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.footer__language select:focus{
+    outline: none;
+    border: 1px solid #545784;
+}
+
+.footer__about-us a, .footer__news a, .footer__help a{
+    font-size: 14px;
+    color: rgb(1, 1, 1);
+    line-height: 2.143;
+    text-decoration: none;
+    padding-bottom: 15px;
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
+}
+
+.footer__help a{
+    padding-bottom: 0;
+}
+
+.footer__about-us a:hover, .footer__news a:hover, .footer__help a:hover{
+    text-decoration: underline;
+}
+
+.footer__mail a{
+    font-size: 14px;
+    color: rgb(0, 215, 147);
+    line-height: 2.143;
+    font-family: 'Avenir Next Cyr', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer__mail a:hover{
+    text-decoration: underline;
+}
+
+.footer__mail a:last-child{
+    display: none;
+}
+
+.footer__mail{
+    padding-bottom: 20px;
+}
+
+.footer__social-networks>div>a{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin-right: 20px;
+    transition: .3s all ease-in-out;
+}
+
+.footer__facebook a{
+    background-image: url(../img/facebook-icon.png);
+}
+
+.footer__instagram a{
+    background-image: url(../img/instagram-icon.png);
+}
+
+.footer__telegram a{
+    background-image: url(../img/telegram-icon.png);
+}
+
+.footer__social-networks{
+    display: flex;
+}
+
+.footer__social-networks>div>a:hover{
+    background-color: #00ffc8;
+    transition: .3s all ease-in-out;
+}
+
+.footer__facebook.footer__facebook-active a{
+    background-color: #00ffc8;
+}
+
+.footer__input{
+    border-bottom: 1px solid #06cf9a;
+    width: 100%;
+    display: flex;
+}
+
+.footer__input input{
+    border: none;
+    width: 89.3939%;
+    padding-bottom: 15px;
+    padding-left: 0;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.footer__input input:focus{
+    outline: none;
+}
+
+.footer__input input::placeholder{
+    font-size: 14px;
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
+    color: rgb(22, 57, 91);
+    line-height: 2.143;
+      
+}
+
+.footer__input button{
+    background-color: transparent;
+    border: none;
+    width: 10.6061%;
+    background-image: url(../img/green-arrow-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer__input button:hover{
+    cursor: pointer;
+}
+
+.footer__bottom{
+    padding: 0 15px;
+    display: flex;
+    padding-top: 36px;
+    justify-content: space-between;
+    font-family: 'Avenir Next Cyr', sans-serif;
+}
+
+.footer__copyright{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.footer__rules{
+    display: flex;
+}
+
+.footer__logo{
+    padding-right: 8px;
+}
+
+.footer__copyright h6{
+    font-size: 14px;
+    color: rgb(22, 57, 91);
+    line-height: 2.143;
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
+}
+
+.footer__copyright h6 span{
+    font-weight: 700;
+}
+
+.footer__rules div a{
+    font-size: 14px;
+    color: rgb(22, 57, 91);
+    text-decoration: underline;
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
+}
+
+.footer__rules div{
+    margin-left: 30px;
+}
+
+.footer__rules > .footer__data-safety{
+    margin-left: 15px;
+}
+
+
+@media(max-width:1120px){
+    .footer__company{
+        padding-bottom: 30px;
+    }
+
+    .footer__subscribe{
+        padding-bottom: 30px;
+    }
+
+    .footer__input{
+        
+        margin: 0;
+    }
+
+    .footer__input button{
+        margin-right: -15px;
+        background-position: center right;
+    }
+
+    .footer__language{
+        height: 100%;
+        
+    }
+
+    .footer__language>form{
+        height: 100%;
+        padding-bottom: 30px;
+    }
+
+    .footer__language>form>select{
+        width: 100%;
+        align-self: end;
+        display: flex;
+    }
+
+    
+}
+
+@media(max-width:479px){
+    .footer__mail a{
+        font-size: 12px;
+    }
+
+    .footer{
+        background: url(../img/Footer_background_mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 120px;
+    }
+
+    .footer__bottom{
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        padding-bottom: 20px;
+    }
+
+    .footer__copyright{
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .footer__copyright h6{
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    }
+
+    .footer__logo>a:first-child>img{
+        display: none;
+    }
+
+    .footer__logo>a:last-child>img{
+        display: block;
+    }
+
+    .footer__rules{
+        width: 100%;
+        margin: 0 -15px;
+    }
+
+    .footer__title a{
+        color: rgb(255, 255, 255);
+        padding-bottom: 15px;
+        
+    }
+
+    .footer__rules>div>a{
+        font-size: 12px;
+        color: rgb(255, 255, 255);
+    }
+
+    .footer__language select{
+        border: 1px solid #fff;
+        color: #fff;
+    }
+
+    .footer__language select option{
+        background-color: #244c83;
+    }
+
+    .footer__language>form{
+        padding-bottom: 0;
+    }
+
+    .footer__language{
+        margin: 0 -15px;
+    }
+
+    .footer__input input{
+        color: #fff;
+    }
+
+    .footer__input input::placeholder{
+        color: white;
+    }
+
+    .footer__mail a:last-child{
+        display: block;
+    }
+
+    .footer__mail a:first-child{
+        display: none;
+    }
+
+    .footer__company{
+        color: #fff;
+        padding-bottom: 20px;
+    }
+
+    .footer__company>div>a{
+        color: #fff;
+    }
+
+    .footer__title {
+        color: rgba(255, 255, 255);
+    }
+
+    .footer__about-us a, .footer__news a{
+        padding-bottom: 10px;
+    }
+
+    .col-sm-margin{
+        margin: 0 -15px;
+    }
+    .footer__logo a:last-child{
+        display: block;
+    }
+    .footer__social-networks{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cap__title>h4 {
+        font-size: 18px;
+    }
+}
