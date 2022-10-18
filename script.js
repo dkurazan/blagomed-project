@@ -22,6 +22,7 @@ const langBtn = document.querySelector(".header__language-button");
 const employees = document.querySelector(".employees");
 const mobileMenu = document.querySelector(".header-mobile__menu");
 const allDoctirsSec = document.querySelector(".all-doctors-section");
+const overlay = document.querySelector(".overlay");
 
 //graph info table
 const showWorkGraph = () => {
@@ -130,302 +131,31 @@ modalField.addEventListener("click", (e) => {
 const openPanelMenu = () => {
   headerMenuBtn.addEventListener("click", () => {
     panelMenuField.classList.toggle("pannel__menu-active");
+    document.body.classList.toggle("scroll-off");
     if (headerMenuBtn.textContent == "Меню") {
       headerMenuBtn.innerHTML = "";
-    } else {
+    } else if (headerMenuBtn.textContent == ""){
       headerMenuBtn.innerHTML = "Меню";
     }
     logInBtn[0].classList.toggle("display-none");
     langBtn.classList.toggle("display-none");
   });
+  
 };
 openPanelMenu();
 
+overlay.addEventListener("click", () => {
+  panelMenuField.classList.remove("pannel__menu-active");
+  document.body.classList.remove("scroll-off");
+  logInBtn[0].classList.remove("display-none");
+  langBtn.classList.remove("display-none");
+  headerMenuBtn.innerHTML = "Меню";
+})
+
 mobileMenu.addEventListener("click", (item) => {
   panelMenuField.classList.toggle("pannel__menu-active");
+  document.body.classList.toggle("scroll-off");
 });
-
-// show all doctors
-const showAllDoctorsList = () => {
-  alloctorsBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    console.log(allDoctirsSec.childElementCount);
-
-    if (allDoctirsSec.childElementCount === 0) {
-      sliderNav.classList.add("display-none");
-      document.querySelector(".slick-track").classList.add("kill-padding");
-      document.querySelector(".all-doctors-section").innerHTML = `
-     <div class="col-lg-3 col-md-6 col-xs-4">
-     <div class="card">
-         <div class="card__top">
-             <div class="card__info">
-                 <div class="card__rating">
-                     <div class="card__rating-icon"></div>
-                     <div class="card__rating-point">
-                         <h6>4,9</h6>
-                         <h6>Рейтинг</h6>
-                     </div>
-                 </div>
-                 <div class="card__reviews">
-                     <div class="card__reviews-icon"></div>
-                     <div class="card__reviews-point">
-                         <h6>123</h6>
-                         <h6>Відгуків</h6>
-                     </div>
-                 </div>
-                 <div class="card__services">
-                     <div class="card__services-icon"></div>
-                     <div class="card__services-point">
-                         <h6>99</h6>
-                         <h6>Послуг</h6>
-                     </div>
-                 </div>
-             </div>
-             <div class="card__photo">
-                 <div class="card__photo-inner">
-                     <a href="#">
-                         <img src="img/Iryna-photo.png" alt="">
-                     </a>
-                     <div class="card__status dont-available"></div>
-                     <div class="like-button"></div>
-                 </div>
-                 <div class="card__photo-desc">Не доступний</div>
-             </div>
-         </div>
-         <div class="card__bottom">
-             <div class="card__name">
-                 <a href="#">Філатова Ірина  Миколаївна</a>
-             </div>
-             <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий, дитячий невропатологб хірург</div>
-             <div class="card__location">
-                 <a href="#">м. Луцьк, пр. Соборності 89, каб. 123</a>
-             </div>
-         </div>
-         <div class="card__prices">
-             <h4>Послуги та ціни</h4>
-             <h5>
-                 <span>Консультація</span> - від 100 грн
-             </h5>
-             <h5>
-                 <span>Сеанс терапії</span> - від 300 грн
-             </h5>
-             <div class="card__prices-buttons">
-                 <div class="card__write-btn">
-                     <a href="#">Написати</a>
-                 </div>
-                 <div class="card__details-btn">
-                     <a href="#">Детальніше</a>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
- <div class="col-lg-3 col-md-6 col-xs-4">
-    <div class="card">
-        <div class="card__top">
-            <div class="card__info">
-                <div class="card__rating">
-                    <div class="card__rating-icon"></div>
-                    <div class="card__rating-point">
-                        <h6>4,9</h6>
-                        <h6>Рейтинг</h6>
-                    </div>
-                </div>
-                <div class="card__reviews">
-                    <div class="card__reviews-icon"></div>
-                    <div class="card__reviews-point">
-                        <h6>123</h6>
-                        <h6>Відгуків</h6>
-                    </div>
-                </div>
-                <div class="card__services">
-                    <div class="card__services-icon"></div>
-                    <div class="card__services-point">
-                        <h6>24</h6>
-                        <h6>Послуг</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card__photo">
-                <div class="card__photo-inner">
-                    <a href="#">
-                        <img src="img/Yurii-photo.png" alt="">
-                    </a>
-                    <div class="card__status"></div>
-                    <div class="like-button"></div>
-                    
-                </div>
-                <div class="card__photo-desc">Доступний</div>
-            </div>
-        </div>
-        <div class="card__bottom">
-            <div class="card__name">
-                <a href="#">Лозовий Юрій  Володимирович</a>
-            </div>
-            <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
-            <div class="card__location">
-                <a href="#">м. Луцьк, пр. Соборності 89, каб. 102</a>
-            </div>
-        </div>
-        <div class="card__prices">
-            <h4>Послуги та ціни</h4>
-            <h5>
-                <span>Консультація</span> - від 100 грн
-            </h5>
-            <h5>
-                <span>Сеанс терапії</span> - від 300 грн
-            </h5>
-            <div class="card__prices-buttons">
-                <div class="card__write-btn">
-                    <a href="#">Написати</a>
-                </div>
-                <div class="card__details-btn">
-                    <a href="#">Детальніше</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-6 col-xs-4">
-    <div class="card">
-        <div class="card__top">
-            <div class="card__info">
-                <div class="card__rating">
-                    <div class="card__rating-icon"></div>
-                    <div class="card__rating-point">
-                        <h6>4,9</h6>
-                        <h6>Рейтинг</h6>
-                    </div>
-                </div>
-                <div class="card__reviews">
-                    <div class="card__reviews-icon"></div>
-                    <div class="card__reviews-point">
-                        <h6>123</h6>
-                        <h6>Відгуків</h6>
-                    </div>
-                </div>
-                <div class="card__services">
-                    <div class="card__services-icon"></div>
-                    <div class="card__services-point">
-                        <h6>1</h6>
-                        <h6>Послуг</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card__photo">
-                <div class="card__photo-inner">
-                    <a href="#">
-                        <img src="img/Dmytro-photo.png" alt="">
-                    </a>
-                    <div class="card__status dont-available"></div>
-                    <div class="like-button"></div>
-                </div>
-                <div class="card__photo-desc">Не доступний</div>
-            </div>
-        </div>
-        <div class="card__bottom">
-            <div class="card__name">
-                <a href="#">Москаленко Дмитро  Миколайович</a>
-            </div>
-            <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
-            <div class="card__location">
-                <a href="#">м. Луцьк, пр. Соборності 89, каб. 345</a>
-            </div>
-        </div>
-        <div class="card__prices">
-            <h4>Послуги та ціни</h4>
-            <h5>
-                <span>Консультація</span> - від 100 грн
-            </h5>
-            <h5>
-                <span>Сеанс терапії</span> - від 300 грн
-            </h5>
-            <div class="card__prices-buttons">
-                <div class="card__write-btn">
-                    <a href="#">Написати</a>
-                </div>
-                <div class="card__details-btn">
-                    <a href="#">Детальніше</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-6 col-xs-4">
-    <div class="card">
-        <div class="card__top">
-            <div class="card__info">
-                <div class="card__rating">
-                    <div class="card__rating-icon"></div>
-                    <div class="card__rating-point">
-                        <h6>4,9</h6>
-                        <h6>Рейтинг</h6>
-                    </div>
-                </div>
-                <div class="card__reviews">
-                    <div class="card__reviews-icon"></div>
-                    <div class="card__reviews-point">
-                        <h6>123</h6>
-                        <h6>Відгуків</h6>
-                    </div>
-                </div>
-                <div class="card__services">
-                    <div class="card__services-icon"></div>
-                    <div class="card__services-point">
-                        <h6>99</h6>
-                        <h6>Послуг</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card__photo">
-                <div class="card__photo-inner">
-                    <a href="#">
-                        <img src="img/Iryna-photo.png" alt="">
-                    </a>
-                    <div class="card__status dont-available"></div>
-                    <div class="like-button"></div>
-                </div>
-                <div class="card__photo-desc">Не доступний</div>
-            </div>
-        </div>
-        <div class="card__bottom">
-            <div class="card__name">
-                <a href="#">Філатова Ірина  Миколаївна</a>
-            </div>
-            <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий, дитячий невропатологб хірург</div>
-            <div class="card__location">
-                <a href="#">м. Луцьк, пр. Соборності 89, каб. 123</a>
-            </div>
-        </div>
-        <div class="card__prices">
-            <h4>Послуги та ціни</h4>
-            <h5>
-                <span>Консультація</span> - від 100 грн
-            </h5>
-            <h5>
-                <span>Сеанс терапії</span> - від 300 грн
-            </h5>
-            <div class="card__prices-buttons">
-                <div class="card__write-btn">
-                    <a href="#">Написати</a>
-                </div>
-                <div class="card__details-btn">
-                    <a href="#">Детальніше</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    `;
-    } else if (allDoctirsSec.childElementCount) {
-      sliderNav.classList.remove("display-none");
-      document.querySelector(".slick-track").classList.remove("kill-padding");
-      document.querySelector(".all-doctors-section").innerHTML = ``;
-    }
-  });
-};
-showAllDoctorsList();
 
 // slider
 $(document).ready(function () {
@@ -493,3 +223,547 @@ $(document).ready(function () {
     ],
   });
 });
+
+// employee card for mobile
+if (window.innerWidth <= 479) {
+
+  employeeCard[0].innerHTML = `<div class="card__top">
+    <div class="card__info">
+        <div class="card__name">
+            <a href="#">Лозовий Юрій  Володимирович</a>
+        </div>
+        <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
+        <div class="like-button"></div>
+    </div>
+    <div class="card__photo">
+        <div class="card__photo-inner">
+            <a href="#">
+                <img src="img/Yurii-photo.png" alt="">
+            </a>
+            <div class="card__status"></div>
+            <div class="like-button"></div>
+        </div>
+        <div class="card__photo-desc">Доступний</div>
+    </div>
+</div>
+<div class="card__bottom">
+    <div class="card__rating">
+        <div class="card__rating-icon"></div>
+        <div class="card__rating-point">
+            <h6>4,9</h6>
+            <h6>Рейтинг</h6>
+        </div>
+    </div>
+    <div class="card__reviews">
+        <div class="card__reviews-icon"></div>
+        <div class="card__reviews-point">
+            <h6>123</h6>
+            <h6>Відгуків</h6>
+        </div>
+    </div>
+    <div class="card__services">
+        <div class="card__services-icon"></div>
+        <div class="card__services-point">
+            <h6>24</h6>
+            <h6>Послуг</h6>
+        </div>
+    </div>
+    <div class="card__location">
+        <div class="card__location-address">
+            <a href="#">м. Луцьк, пр. Соборності 89, каб. 102</a>
+            <p>Луцька міська клінічна лікарня</p>
+        </div>
+        <div class="card__location-icon"></div>
+    </div>
+</div>
+<div class="card__prices">
+    <h4>Послуги та ціни:</h4>
+    <h5>
+        <span>Консультація</span> - від 100 грн
+    </h5>
+    <h5>
+        <span>Сеанс терапії</span> - від 300 грн
+    </h5>
+    <div class="card__prices-buttons">
+        <div class="card__write-btn">
+            <a href="#">Написати</a>
+        </div>
+        <div class="card__details-btn">
+            <a href="#">Сторінка лікаря</a>
+        </div>
+    </div>
+</div>`;
+
+employeeCard[1].innerHTML = `<div class="card__top">
+    <div class="card__info">
+        <div class="card__name">
+            <a href="#">Москаленко Дмитро  Миколайович</a>
+        </div>
+        <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
+        <div class="like-button"></div>
+    </div>
+    <div class="card__photo">
+        <div class="card__photo-inner">
+            <a href="#">
+                <img src="img/Dmytro-photo.png" alt="">
+            </a>
+            <div class="card__status dont-available"></div>
+            <div class="like-button"></div>
+        </div>
+        <div class="card__photo-desc">Не доступний</div>
+    </div>
+</div>
+<div class="card__bottom">
+    <div class="card__rating">
+        <div class="card__rating-icon"></div>
+        <div class="card__rating-point">
+            <h6>4,9</h6>
+            <h6>Рейтинг</h6>
+        </div>
+    </div>
+    <div class="card__reviews">
+        <div class="card__reviews-icon"></div>
+        <div class="card__reviews-point">
+            <h6>123</h6>
+            <h6>Відгуків</h6>
+        </div>
+    </div>
+    <div class="card__services">
+        <div class="card__services-icon"></div>
+        <div class="card__services-point">
+            <h6>1</h6>
+            <h6>Послуг</h6>
+        </div>
+    </div>
+    <div class="card__location">
+        <div class="card__location-address">
+            <a href="#">м. Луцьк, пр. Соборності 89, каб. 345</a>
+            <p>Луцька міська клінічна лікарня</p>
+        </div>
+        <div class="card__location-icon"></div>
+    </div>
+</div>
+<div class="card__prices">
+    <h4>Послуги та ціни:</h4>
+    <h5>
+        <span>Консультація</span> - від 100 грн
+    </h5>
+    <h5>
+        <span>Сеанс терапії</span> - від 300 грн
+    </h5>
+    <div class="card__prices-buttons">
+        <div class="card__write-btn">
+            <a href="#">Написати</a>
+        </div>
+        <div class="card__details-btn">
+            <a href="#">Сторінка лікаря</a>
+        </div>
+    </div>
+</div>`;
+
+employeeCard[2].innerHTML = `<div class="card__top">
+    <div class="card__info">
+        <div class="card__name">
+            <a href="#">Філатова Ірина  Миколаївна</a>
+        </div>
+        <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий, дитячий невропатологб хірург</div>
+        <div class="like-button"></div>
+    </div>
+    <div class="card__photo">
+        <div class="card__photo-inner">
+            <a href="#">
+                <img src="img/Iryna-photo.png" alt="">
+            </a>
+            <div class="card__status dont-available"></div>
+            <div class="like-button"></div>
+        </div>
+        <div class="card__photo-desc">Не доступний</div>
+    </div>
+</div>
+<div class="card__bottom">
+    <div class="card__rating">
+        <div class="card__rating-icon"></div>
+        <div class="card__rating-point">
+            <h6>4,9</h6>
+            <h6>Рейтинг</h6>
+        </div>
+    </div>
+    <div class="card__reviews">
+        <div class="card__reviews-icon"></div>
+        <div class="card__reviews-point">
+            <h6>123</h6>
+            <h6>Відгуків</h6>
+        </div>
+    </div>
+    <div class="card__services">
+        <div class="card__services-icon"></div>
+        <div class="card__services-point">
+            <h6>99</h6>
+            <h6>Послуг</h6>
+        </div>
+    </div>
+    <div class="card__location">
+        <div class="card__location-address">
+            <a href="#">м. Луцьк, пр. Соборності 89, каб. 123</a>
+            <p>Луцька міська клінічна лікарня</p>
+        </div>
+        <div class="card__location-icon"></div>
+    </div>
+</div>
+<div class="card__prices">
+    <h4>Послуги та ціни:</h4>
+    <h5>
+        <span>Консультація</span> - від 100 грн
+    </h5>
+    <h5>
+        <span>Сеанс терапії</span> - від 300 грн
+    </h5>
+    <div class="card__prices-buttons">
+        <div class="card__write-btn">
+            <a href="#">Написати</a>
+        </div>
+        <div class="card__details-btn">
+            <a href="#">Сторінка лікаря</a>
+        </div>
+    </div>
+</div>`;
+
+employeeCard[3].innerHTML = `<div class="card__top">
+    <div class="card__info">
+        <div class="card__name">
+            <a href="#">Омельяненко Анатолій  Анатолійович</a>
+        </div>
+        <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
+        <div class="like-button"></div>
+    </div>
+    <div class="card__photo">
+        <div class="card__photo-inner">
+            <a href="#">
+                <img src="img/Anatoliy-photo.png" alt="">
+            </a>
+            <div class="card__status dont-available"></div>
+            <div class="like-button"></div>
+        </div>
+        <div class="card__photo-desc">Не доступний</div>
+    </div>
+</div>
+<div class="card__bottom">
+    <div class="card__rating">
+        <div class="card__rating-icon"></div>
+        <div class="card__rating-point">
+            <h6>4,9</h6>
+            <h6>Рейтинг</h6>
+        </div>
+    </div>
+    <div class="card__reviews">
+        <div class="card__reviews-icon"></div>
+        <div class="card__reviews-point">
+            <h6>123</h6>
+            <h6>Відгуків</h6>
+        </div>
+    </div>
+    <div class="card__services">
+        <div class="card__services-icon"></div>
+        <div class="card__services-point">
+            <h6>11</h6>
+            <h6>Послуг</h6>
+        </div>
+    </div>
+    <div class="card__location">
+        <div class="card__location-address">
+            <a href="#">м. Луцьк, пр. Соборності 89, каб. 501</a>
+            <p>Луцька міська клінічна лікарня</p>
+        </div>
+        <div class="card__location-icon"></div>
+    </div>
+</div>
+<div class="card__prices">
+    <h4>Послуги та ціни:</h4>
+    <h5>
+        <span>Консультація</span> - від 100 грн
+    </h5>
+    <h5>
+        <span>Сеанс терапії</span> - від 300 грн
+    </h5>
+    <div class="card__prices-buttons">
+        <div class="card__write-btn">
+            <a href="#">Написати</a>
+        </div>
+        <div class="card__details-btn">
+            <a href="#">Сторінка лікаря</a>
+        </div>
+    </div>
+</div>`;
+
+
+employeeCard[4].innerHTML = `<div class="card__top">
+    <div class="card__info">
+        <div class="card__name">
+            <a href="#">Лозовий Юрій  Володимирович</a>
+        </div>
+        <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
+        <div class="like-button"></div>
+    </div>
+    <div class="card__photo">
+        <div class="card__photo-inner">
+            <a href="#">
+                <img src="img/Yurii-photo.png" alt="">
+            </a>
+            <div class="card__status"></div>
+            <div class="like-button"></div>
+        </div>
+        <div class="card__photo-desc">Доступний</div>
+    </div>
+</div>
+<div class="card__bottom">
+    <div class="card__rating">
+        <div class="card__rating-icon"></div>
+        <div class="card__rating-point">
+            <h6>4,9</h6>
+            <h6>Рейтинг</h6>
+        </div>
+    </div>
+    <div class="card__reviews">
+        <div class="card__reviews-icon"></div>
+        <div class="card__reviews-point">
+            <h6>123</h6>
+            <h6>Відгуків</h6>
+        </div>
+    </div>
+    <div class="card__services">
+        <div class="card__services-icon"></div>
+        <div class="card__services-point">
+            <h6>24</h6>
+            <h6>Послуг</h6>
+        </div>
+    </div>
+    <div class="card__location">
+        <div class="card__location-address">
+            <a href="#">м. Луцьк, пр. Соборності 89, каб. 102</a>
+            <p>Луцька міська клінічна лікарня</p>
+        </div>
+        <div class="card__location-icon"></div>
+    </div>
+</div>
+<div class="card__prices">
+    <h4>Послуги та ціни:</h4>
+    <h5>
+        <span>Консультація</span> - від 100 грн
+    </h5>
+    <h5>
+        <span>Сеанс терапії</span> - від 300 грн
+    </h5>
+    <div class="card__prices-buttons">
+        <div class="card__write-btn">
+            <a href="#">Написати</a>
+        </div>
+        <div class="card__details-btn">
+            <a href="#">Сторінка лікаря</a>
+        </div>
+    </div>
+</div>`;
+
+employeeCard[5].innerHTML = `<div class="card__top">
+    <div class="card__info">
+        <div class="card__name">
+            <a href="#">Москаленко Дмитро  Миколайович</a>
+        </div>
+        <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
+        <div class="like-button"></div>
+    </div>
+    <div class="card__photo">
+        <div class="card__photo-inner">
+            <a href="#">
+                <img src="img/Dmytro-photo.png" alt="">
+            </a>
+            <div class="card__status dont-available"></div>
+            <div class="like-button"></div>
+        </div>
+        <div class="card__photo-desc">Не доступний</div>
+    </div>
+</div>
+<div class="card__bottom">
+    <div class="card__rating">
+        <div class="card__rating-icon"></div>
+        <div class="card__rating-point">
+            <h6>4,9</h6>
+            <h6>Рейтинг</h6>
+        </div>
+    </div>
+    <div class="card__reviews">
+        <div class="card__reviews-icon"></div>
+        <div class="card__reviews-point">
+            <h6>123</h6>
+            <h6>Відгуків</h6>
+        </div>
+    </div>
+    <div class="card__services">
+        <div class="card__services-icon"></div>
+        <div class="card__services-point">
+            <h6>1</h6>
+            <h6>Послуг</h6>
+        </div>
+    </div>
+    <div class="card__location">
+        <div class="card__location-address">
+            <a href="#">м. Луцьк, пр. Соборності 89, каб. 345</a>
+            <p>Луцька міська клінічна лікарня</p>
+        </div>
+        <div class="card__location-icon"></div>
+    </div>
+</div>
+<div class="card__prices">
+    <h4>Послуги та ціни:</h4>
+    <h5>
+        <span>Консультація</span> - від 100 грн
+    </h5>
+    <h5>
+        <span>Сеанс терапії</span> - від 300 грн
+    </h5>
+    <div class="card__prices-buttons">
+        <div class="card__write-btn">
+            <a href="#">Написати</a>
+        </div>
+        <div class="card__details-btn">
+            <a href="#">Сторінка лікаря</a>
+        </div>
+    </div>
+</div>`;
+
+employeeCard[6].innerHTML = `<div class="card__top">
+    <div class="card__info">
+        <div class="card__name">
+            <a href="#">Філатова Ірина  Миколаївна</a>
+        </div>
+        <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий, дитячий невропатологб хірург</div>
+        <div class="like-button"></div>
+    </div>
+    <div class="card__photo">
+        <div class="card__photo-inner">
+            <a href="#">
+                <img src="img/Iryna-photo.png" alt="">
+            </a>
+            <div class="card__status dont-available"></div>
+            <div class="like-button"></div>
+        </div>
+        <div class="card__photo-desc">Не доступний</div>
+    </div>
+</div>
+<div class="card__bottom">
+    <div class="card__rating">
+        <div class="card__rating-icon"></div>
+        <div class="card__rating-point">
+            <h6>4,9</h6>
+            <h6>Рейтинг</h6>
+        </div>
+    </div>
+    <div class="card__reviews">
+        <div class="card__reviews-icon"></div>
+        <div class="card__reviews-point">
+            <h6>123</h6>
+            <h6>Відгуків</h6>
+        </div>
+    </div>
+    <div class="card__services">
+        <div class="card__services-icon"></div>
+        <div class="card__services-point">
+            <h6>99</h6>
+            <h6>Послуг</h6>
+        </div>
+    </div>
+    <div class="card__location">
+        <div class="card__location-address">
+            <a href="#">м. Луцьк, пр. Соборності 89, каб. 123</a>
+            <p>Луцька міська клінічна лікарня</p>
+        </div>
+        <div class="card__location-icon"></div>
+    </div>
+</div>
+<div class="card__prices">
+    <h4>Послуги та ціни:</h4>
+    <h5>
+        <span>Консультація</span> - від 100 грн
+    </h5>
+    <h5>
+        <span>Сеанс терапії</span> - від 300 грн
+    </h5>
+    <div class="card__prices-buttons">
+        <div class="card__write-btn">
+            <a href="#">Написати</a>
+        </div>
+        <div class="card__details-btn">
+            <a href="#">Сторінка лікаря</a>
+        </div>
+    </div>
+</div>`;
+
+employeeCard[7].innerHTML = `<div class="card__top">
+    <div class="card__info">
+        <div class="card__name">
+            <a href="#">Омельяненко Анатолій  Анатолійович</a>
+        </div>
+        <div class="card__desc">Інфекціонист, Лікар-нарколог дільничий</div>
+        <div class="like-button"></div>
+    </div>
+    <div class="card__photo">
+        <div class="card__photo-inner">
+            <a href="#">
+                <img src="img/Anatoliy-photo.png" alt="">
+            </a>
+            <div class="card__status dont-available"></div>
+            <div class="like-button"></div>
+        </div>
+        <div class="card__photo-desc">Не доступний</div>
+    </div>
+</div>
+<div class="card__bottom">
+    <div class="card__rating">
+        <div class="card__rating-icon"></div>
+        <div class="card__rating-point">
+            <h6>4,9</h6>
+            <h6>Рейтинг</h6>
+        </div>
+    </div>
+    <div class="card__reviews">
+        <div class="card__reviews-icon"></div>
+        <div class="card__reviews-point">
+            <h6>123</h6>
+            <h6>Відгуків</h6>
+        </div>
+    </div>
+    <div class="card__services">
+        <div class="card__services-icon"></div>
+        <div class="card__services-point">
+            <h6>11</h6>
+            <h6>Послуг</h6>
+        </div>
+    </div>
+    <div class="card__location">
+        <div class="card__location-address">
+            <a href="#">м. Луцьк, пр. Соборності 89, каб. 501</a>
+            <p>Луцька міська клінічна лікарня</p>
+        </div>
+        <div class="card__location-icon"></div>
+    </div>
+</div>
+<div class="card__prices">
+    <h4>Послуги та ціни:</h4>
+    <h5>
+        <span>Консультація</span> - від 100 грн
+    </h5>
+    <h5>
+        <span>Сеанс терапії</span> - від 300 грн
+    </h5>
+    <div class="card__prices-buttons">
+        <div class="card__write-btn">
+            <a href="#">Написати</a>
+        </div>
+        <div class="card__details-btn">
+            <a href="#">Сторінка лікаря</a>
+        </div>
+    </div>
+</div>`;
+
+
+
+}
