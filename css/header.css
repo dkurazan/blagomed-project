@@ -303,7 +303,7 @@ body{
     display: flex;
     justify-content: space-between;
     font-family: "Avenir Next Cyr Medium";
-    
+    width: 100%;
 }
 
 .modal__block-inner div:first-child div{
@@ -414,7 +414,9 @@ body{
         padding-bottom: 70px;
     }
 
-
+    .pannel__menu{
+        width: 250px;
+    }
 }
 
 @media(max-width:479px){
@@ -560,9 +562,7 @@ body{
         cursor: pointer;
     }
 
-    .pannel__menu{
-    width: 250px;
-    }
+
 
     .modal__block{
         width: 290px;
@@ -571,9 +571,6 @@ body{
     .modal__block-inner h1{
         text-align: center;
     }
-    
-    .modal__block-inner div:first-child div{
-        padding-right: 20px;
-    }
+
     
 }
